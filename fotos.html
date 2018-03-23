@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><!-- Cabeçalho do código fonte -->
+        <meta charset="UTF-8"/>
+        <title>Conexus & Cia</title>
+        <!-- importação do CSS -->
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/fotos.css"> 
+    </head>
+    <script type="text/javascript" language="javascript" src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface"> <!-- Criando divisões (colunas) -->
+            <header id="cabecalho"> 
+                <hgroup><!-- Grupo de Titulos --> 
+                    <h1>Conexus & Cia</h1>
+                    <h2>Soluções de T.I para aumentar a performance empresarial</h2>
+                </hgroup>
+                <!-- Importação de imagem -->
+                <img id="icone" src="_imagens/fotos.png"/>
+                <!-- Listas -->
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+
+                        <li onmouseover="mudaIcone('_imagens/home.png')" onmouseout="mudaIcone('_imagens/fotos.png')"><a href="index.html">Home</a></li><!--ItenslistaC/Ref-->
+
+                        <li onmouseover="mudaIcone('_imagens/especificacoes.png')" onmouseout="mudaIcone('_imagens/fotos.png')"><a href="servicos.html">Serviços</a></li>
+
+                        <li><a href="fotos.html">Fotos</a></li>
+
+                        <li onmouseover="mudaIcone('_imagens/contato.png')" onmouseout="mudaIcone('_imagens/fotos.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>  
+            </header>
+            <section id="corpo-full">
+                <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Nossas especialidades!</h3>
+                            <h1>Nós fazemos!</h1>
+                        </hgroup>
+                </header>
+
+				<p>Veja na nossa galeria de fotos várias belas imagens que mostram os principais serviços que a Conexus realiza para você, como instalações elétricas, cabeamento e manutenção. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+
+                <ul id="album-fotos">
+                    <li id="foto01"><span> Montagem de Racks</span></li>
+                    <li id="foto02"><span> Organização dentro do seu Rack</span></li>
+                    <li id="foto03"><span> Limpesa física de desktop</span></li>
+                    <li id="foto04"><span> Câmeras e circuitos elétricos"</span></li>
+                    <li id="foto05"><span> Cabeamentos</span></li>
+                    <li id="foto06"><span> Excelentes conectorizações</span></li>
+                </ul>
+            </section>               
+				
+            <footer id="rodape">
+                <p>Copyright 2018 - by Conexus & Cia <br/>
+                <!-- target blank abre em nova aba -->
+                <a href="http://facebook.com/conexusecia" target="_blank"> Facebook </a>  / E-mail: contato@conexueecia.com.br / cel: (35)99195-8111</p>
+            </footer>
+        </div>
+    </body>
+</html>

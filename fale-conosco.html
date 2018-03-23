@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><!-- Cabeçalho do código fonte -->
+        <meta charset="UTF-8"/>
+        <title>Conexus & Cia</title>
+        <!-- importação do CSS -->
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/form.css">
+        <script language="javascript" src="_javascript/funcoes.js"></script>
+    </head>
+    <script type="text/javascript" language="javascript" src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface"> <!-- Criando divisões (colunas) -->
+            <header id="cabecalho"> 
+                <hgroup><!-- Grupo de Titulos --> 
+                    <h1>Conexus & Cia</h1>
+                    <h2>Soluções de T.I para aumentar a performance empresarial</h2>
+                </hgroup>
+                <!-- Importação de imagem -->
+                <img id="icone" src="_imagens/contato.png"/>
+                <!-- Listas -->
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <li onmouseover="mudaIcone('_imagens/home.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="index.html">Home</a></li><!--ItenslistaC/Ref-->
+                        <li onmouseover="mudaIcone('_imagens/especificacoes.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="servicos.html">Serviços</a></li>
+                        <li onmouseover="mudaIcone('_imagens/fotos.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                        
+                        <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>  
+            </header>
+            <section id="corpo-full">
+                <article>
+                    <form method="post" id="fContato" action="mailto:contato@conexusecia.com.br">
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                                <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="45" maxlength="45" placeholder="Nome Completo"></input></p>
+                                <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="45" placeholder="seuemail@provedor.com"></input></p>
+                                <fieldset id="sexo"><legend>Sexo</legend>
+                                    <input type="radio" name="tSexo" id="cMasc"></input> <label for="cMasc">Masculino</label><br/>
+                                    <input type="radio" name="tSexo" id="cFem"></input> <label for="cFem">Feminino</label><br/>
+                                    <input type="radio" name="tSexo" id="cOutros"></input> <label for="cOutros">Outros</label>
+                                </fieldset>
+                                <p><label for="cDate">Data de Nascimento:</label><input type="date" name="tDate" id="cDate"></input></p>
+                        </fieldset>
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                                <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="45" maxlength="45" placeholder="Rua, Avenida, ..."></input></p>
+                                <p><label for="cNum">Número:<label></label><input type="number" name="tNum" id="cNum" min="0" max="99999" maxlength="5"></input></p>
+                                <p><labe for="cEst">Estado:</labe>
+                                <select name="tEst" id="cEst">
+                                    <optgroup label="Região Norte">
+                                        <option value="AC">Acre-AC</option>   
+                                        <option value="AP">Amapá-AP</option>
+                                        <option value="AM">Amazonas-AM</option>
+                                        <option value="PA">Pará-PA</option>
+                                        <option value="RO">Rondônia-RO</option>
+                                        <option value="RR">Roraima-RR</option>
+                                        <option value="TO">Tocantins-TO</option>
+                                    </optgroup>
+                                    <optgroup label="Região Nordeste">
+                                        <option value="AL">Alagoas-AL</option>
+                                        <option value="BA">Bahia-BA</option>
+                                        <option value="CE">Ceará-CE</option>
+                                        <option value="MA">Maranhão-MA</option>
+                                        <option value="PB">Paraíba-PB</option>
+                                        <option value="PE">Pernambuco-PE</option>
+                                        <option value="PI">Piauí-PI</option>
+                                        <option value="RN">Rio Grande do Norte-RN</option>
+                                        <option value="SE">Sergipe-SE</option>
+                                    </optgroup>
+                                    <optgroup label="Região Centro-Oeste">
+                                        <option value="GO">Goiás-GO</option>
+                                        <option value="MT">Mato Grosso-MT</option>
+                                        <option value="MS">Mato Grosso do Sul-MS</option>
+                                        <option value="DF">Distrito Federal-DF</option>
+                                    </optgroup>
+                                    <optgroup label="Região Sudeste">
+                                        <option value="ES">Espírito Santo-ES</option>
+                                        <option value="MG">Minas Gerais-MG</option>
+                                        <option value="SP">São Paulo-SP</option>
+                                        <option value="RJ">Rio de Janeiro-RJ</option>
+                                    </optgroup>
+                                    <optgroup label="Região Sul">
+                                        <option value="RS">Rio Grande do Sul-RS</option>
+                                        <option value="PR">Paraná-PR</option>
+                                        <option value="SC">Santa Catarina-SC</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="cCid">Cidade:<input type="text" name="tCidade" id="cCidade" size="45" maxlength="45" placeholder="Sua cidade" list="cidades"></input></label></p>
+                                <datalist id="cidades">
+                                    <option value="Rio de janeiro"></option>
+                                    <option value="Nova Iguaçu"></option>
+                                    <option value="Belo Horizonte"></option>
+                                    <option value="São Paulo"></option>
+                                    <option value="Niterói"></option>
+                                    <option value="Belford Roxo"></option>
+                                    <option value="Lavras"></option>
+                                    <option value="Perdões"></option>
+                                    <option value="Ijaci"></option>
+                                    <option value="Itutinga"></option>
+                                    <option value="Ingaí"></option>
+                                    <option value="Nepomuceno"></option>
+                                    <option value="Itumirim"></option>
+                                </datalist>
+                        </fieldset>
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                                <p><label for="cUrg">Grau de Urgência: Min</label><input type="range" name="tUrg" min="0" max="10" step="5">Máx</input></p>
+                                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                        </fieldset>
+                        <fieldset id="pedido">
+                            <legend>Agendamento de Serviço</legend>
+                                <p><input type="checkbox" name="tPed" id="cPed" checked=""><labe for="cPed">Gostaria de agendar um horário</labe></input>
+                                <p><label for="cDia">Dia:<input type="date" name="tDia" id="cDia"></input></label></p>
+                                <p><label for="cHora">Horário:</label><input type="text" name="tHora" id="cHora" placeholder="formato HH:MM"></input></p>
+                        </fieldset>
+
+                        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+                    </form>
+                </article>
+            </section>
+            <footer id="rodape">
+                <p>Copyright 2018 - by Conexus & Cia <br/>
+                <!-- target blank abre em nova aba -->
+                <a href="http://facebook.com/conexusecia" target="_blank"> Facebook </a>  / E-mail: contato@conexueecia.com.br / cel: (35)99195-8111</p>
+            </footer>
+        </div>
+    </body>
+</html>
+

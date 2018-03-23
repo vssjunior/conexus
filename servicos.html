@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><!-- Cabeçalho do código fonte -->
+        <meta charset="UTF-8"/>
+        <title>Conexus & Cia</title>
+        <!-- importação do CSS -->
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/servicos.css">
+    </head>
+    <script type="text/javascript" language="javascript" src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface"> <!-- Criando divisões (colunas) -->
+            <header id="cabecalho"> 
+                <hgroup><!-- Grupo de Titulos --> 
+                    <h1>Conexus & Cia</h1>
+                    <h2>Soluções de T.I para aumentar a performance empresarial</h2>
+                </hgroup>
+                <!-- Importação de imagem -->
+                <img id="icone" src="_imagens/especificacoes.png"/>
+                <!-- Listas -->
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <li onmouseover="mudaIcone('_imagens/home.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="index.html">Home</a></li><!--ItenslistaC/Ref-->
+
+                        <li><a href="servicos.html">Serviços</a></li>
+
+                        <li onmouseover="mudaIcone('_imagens/fotos.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+
+                        <li onmouseover="mudaIcone('_imagens/contato.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>  
+            </header>
+            <section id="corpo-full">
+            	<article id="noticia-principal">
+
+					<br/>Clique em qualquer imagem para ter mais informações sobre os nossos serviços.<br/><br/>
+
+					<section id="conteudo">
+						<img src="_imagens/conexus-esquema-marcado.jpg" usemap="#meumapa">
+						<map name="meumapa">
+							<area shape="rect" coords="33,28,198,145" href="servicos-conexus.html#cftv" target="janela"></area>
+                            <area shape="rect" coords="278,25,472,145" href="servicos-conexus.html#eletrica" target="janela"></area>
+                            <area shape="rect" coords="297,218,468,332" href="servicos-conexus.html#cabeamento" target="janela"></area>
+                            <area shape="rect" coords="28,216,183,335" href="servicos-conexus.html#manutencao" target="janela"></area>
+						</map>
+						<iframe src="servicos-conexus.html" name="janela" id="frame-spec" scrolling="no"></iframe>
+					</section>
+				</article>
+            </section>
+            <footer id="rodape">
+                <p>Copyright 2018 - by Conexus & Cia <br/>
+                <!-- target blank abre em nova aba -->
+                <a href="http://facebook.com/conexusecia" target="_blank"> Facebook </a>  / E-mail: contato@conexueecia.com.br / cel: (35)99195-8111</p>
+            </footer>
+        </div>
+    </body>
+</html>
