@@ -11,14 +11,13 @@
     <script type="text/javascript" language="javascript" src="_javascript/funcoes.js"></script>
     <body>
         <div id="interface"> <!-- Criando divisões (colunas) -->
-            
             <section id="corpo-full">
                 <article>
-                    <form method="post" id="fContato" action="mailto:contato@conexusecia.com.br">
+                    <form method="post" id="fContato" action="cadastro.php">
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
                                 <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="45" maxlength="45" placeholder="Nome Completo"></input></p>
-                                <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="45" placeholder="seuemail@provedor.com"></input></p>
+                                <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="44" placeholder="seuemail@provedor.com"></input></p>
                                 <fieldset id="sexo"><legend>Sexo</legend>
                                     <input type="radio" name="tSexo" id="cMasc"></input> <label for="cMasc">Masculino</label><br/>
                                     <input type="radio" name="tSexo" id="cFem"></input> <label for="cFem">Feminino</label><br/>
@@ -87,23 +86,11 @@
                                     <option value="Itumirim"></option>
                                 </datalist>
                         </fieldset>
-                        <fieldset id="mensagem">
-                            <legend>Mensagem do Usuário</legend>
-                                <p><label for="cUrg">Grau de Urgência: Min</label><input type="range" name="tUrg" min="0" max="10" step="5">Máx</input></p>
-                                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
-                        </fieldset>
-                        <fieldset id="pedido">
-                            <legend>Agendamento de Serviço</legend>
-                                <p><input type="checkbox" name="tPed" id="cPed" checked=""><labe for="cPed">Gostaria de agendar um horário</labe></input>
-                                <p><label for="cDia">Dia:<input type="date" name="tDia" id="cDia"></input></label></p>
-                                <p><label for="cHora">Horário:</label><input type="text" name="tHora" id="cHora" placeholder="formato HH:MM"></input></p>
-                        </fieldset>
 
-                        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+                        <input type="image" name="tCadastrar" src="_imagens/sucesso.png" style="width: 50px;height: 50px;">
                     </form>
                 </article>
             </section>
-
         </div>
     </body>
 </html>

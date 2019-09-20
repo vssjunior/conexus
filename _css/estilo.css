@@ -18,14 +18,17 @@ div#interface {
 	/* Margem: cima, direita, abaixo, esquerda */
 	margin: -20px auto 0px auto;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-	/* padding: cima, direita, abaixo, esquerda */
-	padding: 10px 10px 10px 10px;
+	
 }
 
 /* Configuração de paragrafo */
 p {
 	text-align: justify;
 	text-indent: 50px;
+}
+
+td {
+	text-align: center;
 }
 
 a {
@@ -45,7 +48,7 @@ header#cabecalho img#icone {
 }
 
 header#cabecalho {
-	border-bottom: 1px #606060 solid;
+
 	height: 150px;
 	/* Background: url, repetição da img, largura, altura */
 	background: url("../_imagens/conexus-e-cia.png") no-repeat 0px 80px;
@@ -208,7 +211,6 @@ aside#lateral h2 {
 
 footer#rodape {
 	clear: both;
-	border-top: 1px solid #606060;
 }
 
 footer#rodape p{
