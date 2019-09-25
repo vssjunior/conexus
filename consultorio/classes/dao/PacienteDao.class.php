@@ -6,25 +6,27 @@
     Ultima Modificação: 26/01/2019 - Criação
   */
   
-  //ini_set("display_errors",1);ini_set("display_startup_errors",1);error_reporting(E_ALL);
+  ini_set("display_errors",1);ini_set("display_startup_errors",1);error_reporting(E_ALL);
+
+  include("classes/dao/config.php");
+
+  define("CON", pg_connect("host=127.0.0.1 port=5432 dbname=consultorio_marcelo user=postgres password=postgres"));
+
 
   /**
    * 
    */
   class PacienteDao
   {
-    
-    public function alterarPaciente($cpf, $nome, $dataNascimento, $sexo, $rg, $observacao){
-      include("classes/dao/config.php");
 
-      $con = mysqli_connect($host, $login, $senha, $bd);
+    public function alterarPaciente($cpf, $nome, $dataNascimento, $sexo, $rg, $observacao){
 
       $query = "SELECT cpf FROM paciente WHERE cpf='{$cpf}'";
 
-      $result = mysqli_query($con, $sql);
+      $result = pg_query($con, $sql);
 
       //Verifica se tem resultado
-      if(mysqli_num_rows($result)!=0){
+      if(pg_num_rows($result)!=0){
 
         $sql = "UPDATE paciente
                 SET nome='{$nome}'
@@ -37,18 +39,15 @@
 
         // die("<pre>".$sql);
         //Excuta a query
-        $result = mysqli_query($con, $sql);
+        $result = pg_query($con, $sql);
         
         return $result;
-        mysqli_close($con);
+        pg_close(CON);
       }
     }
 
     public function cadastarPaciente($cpf, $nome, $dataNascimento, $sexo, $rg, $observacao){
-      include("classes/dao/config.php");
-
-      $con = mysqli_connect($host, $login, $senha, $bd);
-
+      
       $query = "INSERT INTO paciente(cpf, nome, data_nascimento, sexo, rg, observacao)
                 VALUES (
                         '{$cpf}',
@@ -59,35 +58,28 @@
                         '{$observacao}'
                         )
                 ";
-      return mysqli_query($con, $query);
+      return pg_query(CON, $query);
 
 
-      mysqli_close($con);
+      pg_close(CON);
     }
 
     public function excluirPaciente($cpf){
-      include("classes/dao/config.php");
-
-      $con = mysqli_connect($host, $login, $senha, $bd);
-
+      
       $query = "DELETE FROM paciente WHERE cpf='{$cpf}'";
 
-      return mysqli_query($con, $query);
+      return pg_query(CON, $query);
 
 
-      mysqli_close($con);
+      pg_close($con);
     }
 
     public function getPacientes(){
-      include("classes/dao/config.php");
-      $con = mysqli_connect($host, $login, $senha, $bd);
+      
       $query = "SELECT * FROM paciente ORDER BY nome";
       // die("<pre>".$sql);
-      return mysqli_query($con, $query);
+      return pg_query(CON, $query);
     }
 
   }
-
-    
-    // header("location: ./principal.php");
 ?>

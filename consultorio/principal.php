@@ -28,7 +28,7 @@
     <form name="form1" method="POST" action="form_incluir.php">
       <table border="0" align="center" width="90%">
         <?php
-          if(mysqli_num_rows($pacientes)==0){
+          if(pg_num_rows($pacientes)==0){
         ?>
         <tr><td align="center">Não há nenhum paciente cadastrado.</td></tr>
         <tr><td align="center"><input type="submit" value="incluir Paciente"></td></tr>
