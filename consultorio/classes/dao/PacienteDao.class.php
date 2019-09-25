@@ -10,7 +10,7 @@
 
   include("classes/dao/config.php");
 
-  define("CON", pg_connect("host=127.0.0.1 port=5432 dbname=consultorio_marcelo user=postgres password=postgres"));
+  define("CON", pg_connect("host=ec2-174-129-27-158.compute-1.amazonaws.com port=5432 dbname=dfi7ogl36hnvrn user=zcmxfvpfjbqips password=956c9f0ce36abd557e29b5ee7b4de0fa60968f09fd02e3e66d875d816d294c12"));
 
 
   /**
