@@ -1,39 +1,414 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	
-	<frameset rows="20%, *, 10%" >
-		<frame src="cabecalho.html" name="cabecalho" ></frame>
-		<frame src="home.html" name="principal" id="principal"></frame>
-		<frame src="footer.html" name="footer" ></frame>
-	</frameset>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conexus &amp; Cia — Consultoria e soluções corporativas de TI em Lavras, MG. Redes, CFTV, cabeamento estruturado, infraestrutura elétrica e manutenção empresarial.">
+  <meta name="keywords" content="TI corporativa, consultoria TI, redes de computadores, CFTV, cabeamento estruturado, Lavras MG, Conexus">
+  <meta name="author" content="Conexus &amp; Cia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.conexusecia.com.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.conexusecia.com.br/">
+  <meta property="og:title" content="Conexus &amp; Cia | Soluções Corporativas de TI">
+  <meta property="og:description" content="Soluções de TI para aumentar a performance empresarial. Consultoria, infraestrutura e tecnologia para empresas em Lavras e região.">
+  <meta property="og:image" content="https://www.conexusecia.com.br/_imagens/conexus-missao.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Conexus &amp; Cia">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conexus &amp; Cia | Soluções Corporativas de TI">
+  <meta name="twitter:description" content="Soluções de TI para aumentar a performance empresarial.">
+  <meta name="twitter:image" content="https://www.conexusecia.com.br/_imagens/conexus-missao.jpg">
+
+  <title>Conexus &amp; Cia | Soluções Corporativas de TI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/main.bundle.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Conexus & Cia",
+    "description": "Soluções de TI para aumentar a performance empresarial. Consultoria e infraestrutura de tecnologia para empresas.",
+    "url": "https://www.conexusecia.com.br",
+    "email": "contato@conexusecia.com.br",
+    "telephone": "+55-35-99195-8111",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lavras",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://facebook.com/conexusecia"],
+    "areaServed": {
+      "@type": "City",
+      "name": "Lavras"
+    },
+    "priceRange": "$$",
+    "image": "https://www.conexusecia.com.br/_imagens/conexus-e-cia.png"
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container-custom site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="Conexus &amp; Cia — Página inicial">
+        <img src="_imagens/conexus-e-cia.png" alt="Conexus &amp; Cia" class="site-header__logo" width="120" height="40" loading="eager">
+        <div>
+          <div class="site-header__name">Conexus &amp; Cia</div>
+          <div class="site-header__tagline">Consultoria &amp; Soluções de TI</div>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#inicio" class="site-nav__link active">Início</a>
+        <a href="#servicos" class="site-nav__link">Serviços</a>
+        <a href="#sobre" class="site-nav__link">Sobre</a>
+        <a href="#clientes" class="site-nav__link">Clientes</a>
+        <a href="#portfolio" class="site-nav__link">Portfólio</a>
+        <a href="#contato" class="site-nav__link">Contato</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--solid site-header__cta">Fale com um Especialista</a>
+      </div>
+
+      <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Menu mobile">
+    <a href="#inicio" class="mobile-nav__link">Início</a>
+    <a href="#servicos" class="mobile-nav__link">Serviços</a>
+    <a href="#sobre" class="mobile-nav__link">Sobre</a>
+    <a href="#clientes" class="mobile-nav__link">Clientes</a>
+    <a href="#portfolio" class="mobile-nav__link">Portfólio</a>
+    <a href="#contato" class="mobile-nav__link">Contato</a>
+    <div class="mobile-nav__actions">
+      <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--dark">Fale com um Especialista</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container-custom">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <span class="hero__badge"><i class="bi bi-shield-check"></i> Consultoria &amp; Tecnologia Corporativa</span>
+            <h1 id="hero-title" class="hero__title">
+              Soluções de <span>TI</span> para aumentar a performance empresarial
+            </h1>
+            <p class="hero__subtitle">
+              Infraestrutura de redes, segurança eletrônica e tecnologia de ponta para empresas que buscam excelência operacional e crescimento sustentável.
+            </p>
+            <div class="hero__actions">
+              <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--solid">
+                <i class="bi bi-chat-dots"></i> Fale com um Especialista
+              </a>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <span class="hero__stat-value">4+</span>
+                <span class="hero__stat-label">Soluções integradas</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-value">Lavras</span>
+                <span class="hero__stat-label">MG e região</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-value">B2B</span>
+                <span class="hero__stat-label">Foco corporativo</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__image-wrapper">
+              <img src="_imagens/conexus-missao.jpg" alt="Equipe Conexus &amp; Cia em ambiente corporativo de tecnologia" class="hero__image" width="600" height="450" loading="eager">
+              <div class="hero__image-accent">
+                <div class="hero__image-accent-icon"><i class="bi bi-diagram-3"></i></div>
+                <div class="hero__image-accent-text">
+                  <strong>Soluções em Redes de Computadores</strong>
+                  <span>Conexus &amp; Cia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section-padding bg-light" aria-labelledby="servicos-title">
+      <div class="container-custom">
+        <header class="section-header section-header--center">
+          <span class="section-label">Nossas Soluções</span>
+          <h2 id="servicos-title" class="section-title">Serviços corporativos de tecnologia</h2>
+          <p class="section-subtitle">Infraestrutura completa para empresas que exigem confiabilidade, segurança e performance em suas operações de TI.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="card-modern">
+            <div class="card-modern__icon"><i class="bi bi-camera-video"></i></div>
+            <h3 class="card-modern__title">CFTV</h3>
+            <p class="card-modern__subtitle">Circuito Fechado de Televisão</p>
+            <p class="card-modern__text">Sistema de câmeras com imagens sempre disponíveis. Gravação, exibição em tempo real, alarmes configuráveis e acesso remoto via internet e dispositivos móveis.</p>
+          </article>
+
+          <article class="card-modern">
+            <div class="card-modern__icon"><i class="bi bi-ethernet"></i></div>
+            <h3 class="card-modern__title">Cabeamento Estruturado</h3>
+            <p class="card-modern__subtitle">Também conhecido pela sigla KET</p>
+            <p class="card-modern__text">Disposição organizada e padronizada de conectores e meios de transmissão para redes de informática e telefonia, permitindo ligação de servidores, estações, impressoras, switches e roteadores.</p>
+          </article>
+
+          <article class="card-modern">
+            <div class="card-modern__icon"><i class="bi bi-lightning-charge"></i></div>
+            <h3 class="card-modern__title">Instalação Elétrica</h3>
+            <p class="card-modern__subtitle">A sensibilidade de um simples óculos</p>
+            <p class="card-modern__text">Instalação elétrica é uma das etapas mais delicadas e merece atenção especial. Determinamos o porte da instalação, estabelecemos os circuitos e especificamos os materiais que serão usados.</p>
+          </article>
+
+          <article class="card-modern">
+            <div class="card-modern__icon"><i class="bi bi-pc-display"></i></div>
+            <h3 class="card-modern__title">Manutenção de Computadores</h3>
+            <p class="card-modern__subtitle">Performance e confiabilidade</p>
+            <p class="card-modern__text">Limpeza física periódica e formatação quando necessário para o bom funcionamento de computadores e notebooks corporativos, garantindo respostas rápidas e operação estável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section-padding" aria-labelledby="sobre-title">
+      <div class="container-custom">
+        <header class="section-header">
+          <span class="section-label">Sobre nós</span>
+          <h2 id="sobre-title" class="section-title">Quem somos</h2>
+          <p class="section-subtitle">Empresa de tecnologia com foco em soluções corporativas de infraestrutura e redes de computadores para empresas de Lavras e região.</p>
+        </header>
+
+        <div class="about-grid">
+          <article class="card-modern about-card">
+            <div class="card-modern__icon"><i class="bi bi-bullseye"></i></div>
+            <h3 class="card-modern__title">Missão</h3>
+            <p class="card-modern__text">Promover soluções de T.I. com enfoque na área de redes de computadores para empresas da cidade de Lavras, buscando inovações para superar as expectativas dos nossos clientes, garantindo respeito e ética.</p>
+          </article>
+
+          <article class="card-modern about-card">
+            <div class="card-modern__icon"><i class="bi bi-eye"></i></div>
+            <h3 class="card-modern__title">Visão</h3>
+            <p class="card-modern__text">Ser uma empresa reconhecida pela excelência em soluções na área de redes até o ano de 2020 na cidade de Lavras, com qualidade e respeito ao meio ambiente.</p>
+          </article>
+
+          <article class="card-modern about-card">
+            <div class="card-modern__icon"><i class="bi bi-gem"></i></div>
+            <h3 class="card-modern__title">Valores</h3>
+            <ul class="values-list">
+              <li><i class="bi bi-check-circle-fill"></i> Atuar sempre de maneira ética e coerente com nossas palavras.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Acreditar que você é capaz e pode realizar seus sonhos.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Respeitar nossos parceiros e colaboradores.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Agir sempre para gerar valor para os clientes, colaboradores e a sociedade.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES -->
+    <section id="clientes" class="section-padding clients-section" aria-labelledby="clientes-title">
+      <div class="container-custom">
+        <header class="section-header section-header--center">
+          <span class="section-label">Confiança comprovada</span>
+          <h2 id="clientes-title" class="section-title">Empresas que confiam na Conexus</h2>
+          <p class="section-subtitle">Parceiros corporativos atendidos em 2017 – 2018. Resultados que reforçam nossa credibilidade no mercado.</p>
+        </header>
+
+        <div class="clients-grid">
+          <div class="client-card">
+            <img src="_imagens/logosofica.jpg" alt="Logosofica" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+          <div class="client-card">
+            <img src="_imagens/via-bella.jpg" alt="Via Bella" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+          <div class="client-card">
+            <img src="_imagens/locsul.jpg" alt="Loc Sul" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+          <div class="client-card">
+            <img src="_imagens/katuxa.png" alt="Katuxa" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+          <div class="client-card">
+            <img src="_imagens/neurologia.jpg" alt="Centro de Neurologia de Lavras" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+          <div class="client-card">
+            <img src="_imagens/rainhamodas.jpg" alt="Rainha Modas" class="client-card__logo" width="160" height="72" loading="lazy">
+          </div>
+        </div>
+
+        <div class="clients-trust">
+          <div class="clients-trust__item"><i class="bi bi-building"></i> Atendimento B2B</div>
+          <div class="clients-trust__item"><i class="bi bi-award"></i> Excelência técnica</div>
+          <div class="clients-trust__item"><i class="bi bi-hand-thumbs-up"></i> Parceria de longo prazo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="section-padding bg-light" aria-labelledby="portfolio-title">
+      <div class="container-custom">
+        <header class="section-header section-header--center">
+          <span class="section-label">Portfólio</span>
+          <h2 id="portfolio-title" class="section-title">Projetos e especialidades</h2>
+          <p class="section-subtitle">Veja na nossa galeria de fotos várias belas imagens que mostram os principais serviços que a Conexus realiza para você, como instalações elétricas, cabeamento e manutenção.</p>
+        </header>
+
+        <div class="portfolio-grid">
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-01.jpg" data-caption="Montagem de Racks" aria-label="Ver foto: Montagem de Racks">
+            <img src="_imagens/galeria-01.jpg" alt="Montagem de Racks" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Montagem de Racks</p></div>
+          </button>
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-02.jpg" data-caption="Organização dentro do seu Rack" aria-label="Ver foto: Organização dentro do seu Rack">
+            <img src="_imagens/galeria-02.jpg" alt="Organização dentro do seu Rack" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Organização dentro do seu Rack</p></div>
+          </button>
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-03.jpg" data-caption="Limpesa física de desktop" aria-label="Ver foto: Limpesa física de desktop">
+            <img src="_imagens/galeria-03.jpg" alt="Limpesa física de desktop" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Limpesa física de desktop</p></div>
+          </button>
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-04.jpg" data-caption="Câmeras e circuitos elétricos" aria-label="Ver foto: Câmeras e circuitos elétricos">
+            <img src="_imagens/galeria-04.jpg" alt="Câmeras e circuitos elétricos" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Câmeras e circuitos elétricos</p></div>
+          </button>
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-05.jpg" data-caption="Cabeamentos" aria-label="Ver foto: Cabeamentos">
+            <img src="_imagens/galeria-05.jpg" alt="Cabeamentos" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Cabeamentos</p></div>
+          </button>
+          <button class="portfolio-card" data-lightbox="_imagens/galeria-06.jpg" data-caption="Excelentes conectorizações" aria-label="Ver foto: Excelentes conectorizações">
+            <img src="_imagens/galeria-06.jpg" alt="Excelentes conectorizações" class="portfolio-card__image" width="400" height="300" loading="lazy">
+            <span class="portfolio-card__icon"><i class="bi bi-zoom-in"></i></span>
+            <div class="portfolio-card__overlay"><p class="portfolio-card__title">Excelentes conectorizações</p></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section-padding bg-primary contact-section" aria-labelledby="contato-title">
+      <div class="container-custom">
+        <div class="contact-grid">
+          <div>
+            <span class="section-label" style="color: rgba(255,255,255,0.8);">Fale com um Especialista</span>
+            <h2 id="contato-title" class="section-title" style="color: #fff;">Pronto para transformar a TI da sua empresa?</h2>
+            <p style="opacity: 0.9; max-width: 480px;">Entre em contato com nossa equipe de consultoria. Estamos prontos para entender suas necessidades e apresentar a melhor solução corporativa.</p>
+
+            <div class="contact-channels">
+              <a href="https://wa.me/5535991958111" class="contact-channel" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (35) 99195-8111">
+                <span class="contact-channel__icon"><i class="bi bi-whatsapp"></i></span>
+                <span>
+                  <span class="contact-channel__label">WhatsApp</span>
+                  <span class="contact-channel__value">(35) 99195-8111</span>
+                </span>
+              </a>
+              <a href="tel:+5535991958111" class="contact-channel" aria-label="Telefone (35) 99195-8111">
+                <span class="contact-channel__icon"><i class="bi bi-telephone"></i></span>
+                <span>
+                  <span class="contact-channel__label">Telefone</span>
+                  <span class="contact-channel__value">(35) 99195-8111</span>
+                </span>
+              </a>
+              <a href="mailto:contato@conexusecia.com.br" class="contact-channel" aria-label="E-mail contato@conexusecia.com.br">
+                <span class="contact-channel__icon"><i class="bi bi-envelope"></i></span>
+                <span>
+                  <span class="contact-channel__label">E-mail</span>
+                  <span class="contact-channel__value">contato@conexusecia.com.br</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-cta-box">
+            <h3>Fale com um Especialista</h3>
+            <p>Preencha nosso formulário e nossa equipe entrará em contato para uma consultoria personalizada.</p>
+            <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--solid">
+              <i class="bi bi-headset"></i> Fale com um Especialista
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="_imagens/conexus-e-cia.png" alt="Conexus &amp; Cia" width="120" height="36" loading="lazy">
+          <p>Soluções de TI para aumentar a performance empresarial. Consultoria, infraestrutura e tecnologia corporativa em Lavras, MG.</p>
+          <div class="site-footer__social">
+            <a href="https://facebook.com/conexusecia" target="_blank" rel="noopener noreferrer" aria-label="Facebook Conexus &amp; Cia"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/5535991958111" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:contato@conexusecia.com.br" aria-label="E-mail"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Navegação</h3>
+          <ul class="site-footer__links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Serviços</h3>
+          <ul class="site-footer__links">
+            <li><a href="#servicos">CFTV</a></li>
+            <li><a href="#servicos">Cabeamento Estruturado</a></li>
+            <li><a href="#servicos">Instalação Elétrica</a></li>
+            <li><a href="#servicos">Manutenção de Computadores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="site-footer__heading">Contato</h3>
+          <ul class="site-footer__links">
+            <li><a href="mailto:contato@conexusecia.com.br">contato@conexusecia.com.br</a></li>
+            <li><a href="tel:+5535991958111">(35) 99195-8111</a></li>
+            <li><a href="fale-conosco.html">Fale com um Especialista</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>Copyright &copy; 2018 – Conexus &amp; Cia. Todos os direitos reservados.</p>
+        <p>Lavras, Minas Gerais — Brasil</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+</body>
 </html>
-
-<!-- SIMBOLOS EM HTML5
-
-	<br/> - QuebraLinha
-
-	&nbsp; - espaço 
-	&shy; - espaçoComIfen
-	&lt; - >
-	&gt: - <
-	&le; - >=
-	&ge; - <=
-	&copy; - Coporetion
-	&reg; - Marca Registrada
-	&radic; - raiz
-	&Delta;
-	&Lambda;
-	&omega;
-	&phi;
-
-	Setas:
-		&larr;
-		&rarr;
-		&uarr;
-		&darr;
-		&harr;
-
-	Translate:
-		Section: Sessão; Aside: Conteudo lateral; Footer:Rodapé; header: cabecalho.
-		head: cabeça; 
--->

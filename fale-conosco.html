@@ -1,112 +1,224 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br">
-    <head><!-- Cabeçalho do código fonte -->
-        <meta charset="UTF-8"/>
-                <title>Conexus & Cia</title>
-        <!-- importação do CSS -->
-        <link rel="stylesheet" type="text/css" href="./_css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="./_css/form.css">
-        <script language="javascript" src="./_javascript/funcoes.js"></script>
-    </head>
-    <script type="text/javascript" language="javascript" src="./_javascript/funcoes.js"></script>
-    <body>
-        <div id="interface"> <!-- Criando divisões (colunas) -->
-            
-            <section id="corpo-full">
-                <article>
-                    <form method="post" id="fContato" action="mailto:contato@conexusecia.com.br">
-                        <fieldset id="usuario">
-                            <legend>Identificação do Usuário</legend>
-                                <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="45" maxlength="45" placeholder="Nome Completo"></input></p>
-                                <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="45" placeholder="seuemail@provedor.com"></input></p>
-                                <fieldset id="sexo"><legend>Sexo</legend>
-                                    <input type="radio" name="tSexo" id="cMasc"></input> <label for="cMasc">Masculino</label><br/>
-                                    <input type="radio" name="tSexo" id="cFem"></input> <label for="cFem">Feminino</label><br/>
-                                    <input type="radio" name="tSexo" id="cOutros"></input> <label for="cOutros">Outros</label>
-                                </fieldset>
-                                <p><label for="cDate">Data de Nascimento:</label><input type="date" name="tDate" id="cDate"></input></p>
-                        </fieldset>
-                        <fieldset id="endereco">
-                            <legend>Endereço do Usuário</legend>
-                                <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="45" maxlength="45" placeholder="Rua, Avenida, ..."></input></p>
-                                <p><label for="cNum">Número:<label></label><input type="number" name="tNum" id="cNum" min="0" max="99999" maxlength="5"></input></p>
-                                <p><labe for="cEst">Estado:</labe>
-                                <select name="tEst" id="cEst">
-                                    <optgroup label="Região Norte">
-                                        <option value="AC">Acre-AC</option>   
-                                        <option value="AP">Amapá-AP</option>
-                                        <option value="AM">Amazonas-AM</option>
-                                        <option value="PA">Pará-PA</option>
-                                        <option value="RO">Rondônia-RO</option>
-                                        <option value="RR">Roraima-RR</option>
-                                        <option value="TO">Tocantins-TO</option>
-                                    </optgroup>
-                                    <optgroup label="Região Nordeste">
-                                        <option value="AL">Alagoas-AL</option>
-                                        <option value="BA">Bahia-BA</option>
-                                        <option value="CE">Ceará-CE</option>
-                                        <option value="MA">Maranhão-MA</option>
-                                        <option value="PB">Paraíba-PB</option>
-                                        <option value="PE">Pernambuco-PE</option>
-                                        <option value="PI">Piauí-PI</option>
-                                        <option value="RN">Rio Grande do Norte-RN</option>
-                                        <option value="SE">Sergipe-SE</option>
-                                    </optgroup>
-                                    <optgroup label="Região Centro-Oeste">
-                                        <option value="GO">Goiás-GO</option>
-                                        <option value="MT">Mato Grosso-MT</option>
-                                        <option value="MS">Mato Grosso do Sul-MS</option>
-                                        <option value="DF">Distrito Federal-DF</option>
-                                    </optgroup>
-                                    <optgroup label="Região Sudeste">
-                                        <option value="ES">Espírito Santo-ES</option>
-                                        <option value="MG">Minas Gerais-MG</option>
-                                        <option value="SP">São Paulo-SP</option>
-                                        <option value="RJ">Rio de Janeiro-RJ</option>
-                                    </optgroup>
-                                    <optgroup label="Região Sul">
-                                        <option value="RS">Rio Grande do Sul-RS</option>
-                                        <option value="PR">Paraná-PR</option>
-                                        <option value="SC">Santa Catarina-SC</option>
-                                    </optgroup>
-                                </select></p>
-                                <p><label for="cCid">Cidade:<input type="text" name="tCidade" id="cCidade" size="45" maxlength="45" placeholder="Sua cidade" list="cidades"></input></label></p>
-                                <datalist id="cidades">
-                                    <option value="Rio de janeiro"></option>
-                                    <option value="Nova Iguaçu"></option>
-                                    <option value="Belo Horizonte"></option>
-                                    <option value="São Paulo"></option>
-                                    <option value="Niterói"></option>
-                                    <option value="Belford Roxo"></option>
-                                    <option value="Lavras"></option>
-                                    <option value="Perdões"></option>
-                                    <option value="Ijaci"></option>
-                                    <option value="Itutinga"></option>
-                                    <option value="Ingaí"></option>
-                                    <option value="Nepomuceno"></option>
-                                    <option value="Itumirim"></option>
-                                </datalist>
-                        </fieldset>
-                        <fieldset id="mensagem">
-                            <legend>Mensagem do Usuário</legend>
-                                <p><label for="cUrg">Grau de Urgência: Min</label><input type="range" name="tUrg" min="0" max="10" step="5">Máx</input></p>
-                                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
-                        </fieldset>
-                        <fieldset id="pedido">
-                            <legend>Agendamento de Serviço</legend>
-                                <p><input type="checkbox" name="tPed" id="cPed" checked=""><labe for="cPed">Gostaria de agendar um horário</labe></input>
-                                <p><label for="cDia">Dia:<input type="date" name="tDia" id="cDia"></input></label></p>
-                                <p><label for="cHora">Horário:</label><input type="text" name="tHora" id="cHora" placeholder="formato HH:MM"></input></p>
-                        </fieldset>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com um especialista da Conexus &amp; Cia. Solicite atendimento, agende consultoria ou envie sua mensagem sobre soluções corporativas de TI.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.conexusecia.com.br/fale-conosco.html">
+  <meta property="og:title" content="Fale com um Especialista | Conexus &amp; Cia">
+  <meta property="og:description" content="Solicite atendimento da equipe de consultoria Conexus &amp; Cia.">
+  <meta property="og:url" content="https://www.conexusecia.com.br/fale-conosco.html">
+  <title>Fale com um Especialista | Conexus &amp; Cia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/main.bundle.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
 
-                        <input type="image" name="tEnviar" src="./_imagens/botao-enviar.png">
-                    </form>
-                </article>
-            </section>
-
+  <header class="site-header" role="banner">
+    <div class="container-custom site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="Conexus &amp; Cia — Página inicial">
+        <img src="_imagens/conexus-e-cia.png" alt="Conexus &amp; Cia" class="site-header__logo" width="120" height="40">
+        <div>
+          <div class="site-header__name">Conexus &amp; Cia</div>
+          <div class="site-header__tagline">Consultoria &amp; Soluções de TI</div>
         </div>
-    </body>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html#inicio" class="site-nav__link">Início</a>
+        <a href="index.html#servicos" class="site-nav__link">Serviços</a>
+        <a href="index.html#contato" class="site-nav__link">Contato</a>
+      </nav>
+      <div class="site-header__actions">
+        <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--solid site-header__cta">Fale com um Especialista</a>
+      </div>
+      <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" aria-label="Menu mobile">
+    <a href="index.html" class="mobile-nav__link">Voltar ao site</a>
+    <a href="index.html#servicos" class="mobile-nav__link">Serviços</a>
+    <a href="index.html#contato" class="mobile-nav__link">Contato</a>
+  </nav>
+
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <main id="main-content" class="form-page">
+    <div class="container-custom">
+      <header class="form-page__header">
+        <span class="section-label">Contato</span>
+        <h1>Fale com um Especialista</h1>
+        <p>Envie sua mensagem ou agende um horário com nossa equipe de consultoria corporativa.</p>
+      </header>
+
+      <div id="form-errors" class="form-alert form-alert--error" role="alert" hidden></div>
+
+      <div id="form-success" class="form-success" role="status" hidden>
+        <div class="form-success__icon"><i class="bi bi-check-lg"></i></div>
+        <h2>Mensagem enviada com sucesso.</h2>
+        <p class="form-success__cta">Entraremos em contato em breve.</p>
+        <div class="form-success__actions">
+          <a href="index.html" class="btn-primary-custom btn-primary-custom--solid">Voltar ao site</a>
+          <a href="fale-conosco.html" class="btn-primary-custom btn-primary-custom--ghost">Enviar nova mensagem</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="fContato" novalidate>
+          <fieldset>
+            <legend>Identificação</legend>
+            <div class="form-group">
+              <label for="cNome">Nome <span aria-hidden="true">*</span></label>
+              <input type="text" name="cNome" id="cNome" maxlength="80" placeholder="Nome Completo" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="cMail">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" name="cMail" id="cMail" placeholder="seuemail@provedor.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="cTel">Telefone <span aria-hidden="true">*</span></label>
+              <input type="tel" name="cTel" id="cTel" maxlength="15" placeholder="(35) 99999-9999" required autocomplete="tel">
+            </div>
+          </fieldset>
+
+          <fieldset id="endereco-fieldset">
+            <legend>Endereço</legend>
+            <div class="form-group">
+              <label for="cCep">CEP <span aria-hidden="true">*</span></label>
+              <input type="text" name="cCep" id="cCep" inputmode="numeric" maxlength="9" placeholder="00000-000" required autocomplete="postal-code">
+              <p id="cep-loading" class="cep-loading" hidden aria-live="polite">Buscando endereço...</p>
+              <p id="cep-error" class="cep-feedback cep-feedback--error" role="alert" hidden></p>
+            </div>
+            <div class="form-group">
+              <label for="cRua">Logradouro <span aria-hidden="true">*</span></label>
+              <input type="text" name="cRua" id="cRua" maxlength="120" placeholder="Rua, Avenida, ..." required autocomplete="street-address">
+            </div>
+            <div class="form-row form-row--split">
+              <div class="form-group">
+                <label for="cNum">Número <span aria-hidden="true">*</span></label>
+                <input type="text" name="cNum" id="cNum" maxlength="10" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="cCompl">Complemento</label>
+                <input type="text" name="cCompl" id="cCompl" maxlength="60" placeholder="Sala, bloco, apto..." autocomplete="off">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cBairro">Bairro <span aria-hidden="true">*</span></label>
+              <input type="text" name="cBairro" id="cBairro" maxlength="80" required autocomplete="off">
+            </div>
+            <div class="form-row form-row--split">
+              <div class="form-group">
+                <label for="cCidade">Cidade <span aria-hidden="true">*</span></label>
+                <input type="text" name="cCidade" id="cCidade" maxlength="80" required autocomplete="address-level2">
+              </div>
+              <div class="form-group">
+                <label for="cEst">Estado <span aria-hidden="true">*</span></label>
+                <select name="cEst" id="cEst" required autocomplete="address-level1">
+                  <option value="">Selecione</option>
+                  <optgroup label="Região Norte">
+                    <option value="AC">Acre-AC</option>
+                    <option value="AP">Amapá-AP</option>
+                    <option value="AM">Amazonas-AM</option>
+                    <option value="PA">Pará-PA</option>
+                    <option value="RO">Rondônia-RO</option>
+                    <option value="RR">Roraima-RR</option>
+                    <option value="TO">Tocantins-TO</option>
+                  </optgroup>
+                  <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas-AL</option>
+                    <option value="BA">Bahia-BA</option>
+                    <option value="CE">Ceará-CE</option>
+                    <option value="MA">Maranhão-MA</option>
+                    <option value="PB">Paraíba-PB</option>
+                    <option value="PE">Pernambuco-PE</option>
+                    <option value="PI">Piauí-PI</option>
+                    <option value="RN">Rio Grande do Norte-RN</option>
+                    <option value="SE">Sergipe-SE</option>
+                  </optgroup>
+                  <optgroup label="Região Centro-Oeste">
+                    <option value="GO">Goiás-GO</option>
+                    <option value="MT">Mato Grosso-MT</option>
+                    <option value="MS">Mato Grosso do Sul-MS</option>
+                    <option value="DF">Distrito Federal-DF</option>
+                  </optgroup>
+                  <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo-ES</option>
+                    <option value="MG">Minas Gerais-MG</option>
+                    <option value="SP">São Paulo-SP</option>
+                    <option value="RJ">Rio de Janeiro-RJ</option>
+                  </optgroup>
+                  <optgroup label="Região Sul">
+                    <option value="RS">Rio Grande do Sul-RS</option>
+                    <option value="PR">Paraná-PR</option>
+                    <option value="SC">Santa Catarina-SC</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Mensagem</legend>
+            <div class="form-group">
+              <label for="cUrg">Grau de Urgência</label>
+              <input type="range" name="cUrg" id="cUrg" min="0" max="10" step="5" value="5">
+              <div class="form-range-label"><span>Baixa</span><span>Alta</span></div>
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Mensagem <span aria-hidden="true">*</span></label>
+              <textarea name="cMsg" id="cMsg" rows="5" placeholder="Deixe aqui sua mensagem" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Agendamento de Serviço</legend>
+            <div class="form-checkbox">
+              <input type="checkbox" name="cPed" id="cPed" checked>
+              <label for="cPed">Gostaria de agendar um horário</label>
+            </div>
+            <div id="agendamento-fields" class="form-row form-row--split" style="margin-top: 1rem;">
+              <div class="form-group">
+                <label for="cDia">Dia <span aria-hidden="true">*</span></label>
+                <input type="date" name="cDia" id="cDia">
+              </div>
+              <div class="form-group">
+                <label for="cHora">Horário <span aria-hidden="true">*</span></label>
+                <input type="text" name="cHora" id="cHora" placeholder="formato HH:MM">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" id="btn-submit" class="btn-primary-custom btn-primary-custom--solid btn-submit" aria-busy="false">
+              <span class="btn-submit__label"><i class="bi bi-send"></i> Enviar Mensagem</span>
+              <span class="btn-submit__spinner" hidden><span class="spinner"></span> Enviando...</span>
+            </button>
+            <a href="index.html" class="btn-primary-custom btn-primary-custom--ghost">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="site-footer__bottom">
+        <p>Copyright &copy; 2018 – Conexus &amp; Cia. Todos os direitos reservados.</p>
+        <p><a href="index.html" style="color: var(--color-gray-400);">Voltar ao site</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/cep-service.js" defer></script>
+  <script src="js/contact-service.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+</body>
 </html>
-
-
-

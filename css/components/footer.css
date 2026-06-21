@@ -1,0 +1,108 @@
+.site-footer {
+  background: var(--color-gray-900);
+  color: var(--color-gray-400);
+  padding-block: var(--space-5) var(--space-3);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 576px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .site-footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.site-footer__brand img {
+  height: 36px;
+  margin-bottom: var(--space-2);
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.site-footer__brand p {
+  font-size: var(--font-size-small);
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+.site-footer__heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer__links li {
+  margin-bottom: 0.625rem;
+}
+
+.site-footer__links a {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-small);
+  transition: color var(--transition);
+}
+
+.site-footer__links a:hover {
+  color: var(--color-white);
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: var(--space-2);
+}
+
+.site-footer__social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  color: var(--color-gray-400);
+  font-size: 1.125rem;
+  transition: all var(--transition);
+}
+
+.site-footer__social a:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.site-footer__bottom {
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-size-small);
+}
+
+@media (min-width: 768px) {
+  .site-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
