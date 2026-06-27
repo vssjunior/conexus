@@ -22,6 +22,9 @@
       body.append(entry[0], String(entry[1] ?? ''));
     });
 
+    // Campo JSON para o Apps Script (e.parameter.payload)
+    body.append('payload', JSON.stringify(payload));
+
     return body;
   }
 
