@@ -1,8 +1,9 @@
 /**
  * Conexus & Cia — Integração Google Apps Script
  *
- * Usa Content-Type text/plain para evitar preflight CORS,
- * padrão recomendado para Web Apps do Google Apps Script.
+ * Envia via application/x-www-form-urlencoded + mode no-cors para contornar
+ * a ausência de Access-Control-Allow-Origin nas Web Apps do GAS.
+ * No Apps Script, leia os campos em e.parameter dentro do doPost.
  */
 (function (global) {
   'use strict';
@@ -14,6 +15,16 @@
     return window.location.protocol === 'file:';
   }
 
+  function buildFormBody(payload) {
+    const body = new URLSearchParams();
+
+    Object.entries(payload).forEach(function (entry) {
+      body.append(entry[0], String(entry[1] ?? ''));
+    });
+
+    return body;
+  }
+
   async function submitContact(payload) {
     if (isFileProtocol()) {
       throw new Error(
@@ -21,57 +32,21 @@
       );
     }
 
-    let response;
+    const body = buildFormBody(payload);
 
     try {
-      response = await fetch(APP_SCRIPT_URL, {
+      await fetch(APP_SCRIPT_URL, {
         method: 'POST',
-        redirect: 'follow',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-        },
-        body: JSON.stringify(payload),
+        mode: 'no-cors',
+        body: body,
       });
+
+      return { success: true };
     } catch (error) {
       throw new Error(
         'Não foi possível enviar sua solicitação neste momento. Verifique sua conexão e tente novamente em alguns minutos.'
       );
     }
-
-    const rawText = await response.text();
-    let parsed = null;
-
-    if (rawText) {
-      const trimmed = rawText.trim();
-
-      if (trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html')) {
-        throw new Error(
-          'Não foi possível enviar sua solicitação neste momento. Tente novamente em alguns minutos.'
-        );
-      }
-
-      try {
-        parsed = JSON.parse(trimmed);
-      } catch (error) {
-        parsed = null;
-      }
-    }
-
-    if (!response.ok) {
-      throw new Error(
-        (parsed && (parsed.message || parsed.error)) ||
-          'Não foi possível enviar sua solicitação neste momento. Tente novamente em alguns minutos.'
-      );
-    }
-
-    if (parsed && parsed.success === false) {
-      throw new Error(
-        parsed.message ||
-          'Não foi possível enviar sua solicitação neste momento. Tente novamente em alguns minutos.'
-      );
-    }
-
-    return parsed || { success: true };
   }
 
   global.ConexusContactService = {
