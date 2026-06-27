@@ -1380,7 +1380,11 @@ ul {
   min-width: 180px;
 }
 
-.btn-submit__spinner {
+.btn-submit__spinner[hidden] {
+  display: none !important;
+}
+
+.btn-submit__spinner:not([hidden]) {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
